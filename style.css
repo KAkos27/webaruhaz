@@ -1,130 +1,134 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-body{
-    height: 100vh;
-    background-image: url(kepek/bg.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+body {
+  height: 100vh;
+  background-image: url(kepek/bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-main{
-    
-    background-color:lightpink;
-    width: 800px;
-    margin: auto;
-    display: grid;
+main {
+  background-color: lightpink;
+  width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "n n n n"
+    "a a a b"
+    "f f f f";
+}
+article {
+  grid-area: a;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4px;
+  margin-left: 5px;
+}
+aside {
+  text-align: right;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  grid-area: b;
+  background-color: white;
+  width: 150px;
+  margin: 0px 5px 0px 5px;
+}
+aside ul {
+  list-style-type: none;
+}
+.kepek {
+  background-color: white;
+}
+.kepek ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style-type: none;
+  padding-bottom: 8px;
+}
+.kepek ul li {
+  margin-bottom: 5px;
+}
+.kepek ul li a {
+  margin: 3px;
+  border: 1px solid lightpink;
+  border-radius: 7px;
+  padding: 7px;
+  text-decoration: none;
+  color: black;
+}
+.kepek ul li a:hover {
+  background-color: lightpink;
+}
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+nav {
+  grid-area: n;
+  margin-bottom: 5px;
+}
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+}
+nav ul li {
+  padding: 20px;
+}
+nav ul li a {
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+}
+nav li:hover {
+  background-color: white;
+}
+nav li:hover a {
+  color: black;
+}
+footer {
+  grid-area: f;
+  margin-top: 10px;
+  background-color: white;
+  height: 22px;
+}
+@media (max-width: 400px) {
+  body {
+    font-size: 12vw;
+  }
+  main {
+    grid-template-areas:
+      "n"
+      "b"
+      "a"
+      "f";
+  }
+  article {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-        "n n n n"
-        "a a a b"
-        "f f f f";
-        
-}
-article{
-    grid-area: a;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:4px;
-}
-aside{
-    text-align: right;
+  }
+  nav ul {
+    grid-template-columns: 1fr;
+  }
+  .kepek {
+    margin: auto;
     width: 100%;
+  }
+  img {
+    width: 50%;
     height: auto;
     max-width: 100%;
-    grid-area: b;
-    background-color: white;
-    width: 150px;
-    margin: 0px 5px 0px 5px;
-}
-aside ul{
-    list-style-type: none;
-}
-.kepek{
-    background-color: white;
-}
-.kepek ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style-type: none;
-    padding-bottom: 8px;
-}
-.kepek ul li{
+  }
+  aside {
+    margin: auto;
+    width: 100%;
     margin-bottom: 5px;
-}
-.kepek ul li a{
-    margin: 3px;
-    border: 1px solid lightpink;
-    border-radius: 7px;
-    padding: 7px;
-    text-decoration: none;
-    color: black;
-}
-.kepek ul li a:hover{
-    background-color: lightpink;
-}
-img{
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-}
-nav{
-    grid-area: n;
-}
-nav ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    list-style: none;
-}
-nav ul li{
-    margin: 20px;
-}
-nav ul li a{
-    padding: 20px;
-    text-decoration: none;
-    color: white;
-}
-nav a:hover{
-    background-color: white;
-    color: black;
-}
-footer{
-    grid-area: f;
-    margin-top: 10px;
-    background-color:white;
-    height: 22px;
-}
-@media(max-width:400px){
-    main{
-        grid-template-areas: 
-        "n"
-        "b"
-        "a"
-        "f";
-    }
-    article{
-        grid-template-columns: 1fr;
-    }
-    nav ul{
-        grid-template-columns: 1fr;
-    }
-    .kepek{
-        margin: auto;
-        width: 65%;
-    }
-    img{
-        width: 50%;
-        height: auto;
-        max-width: 100%;
-    }
-    aside{
-        margin: auto;
-        width: 65%;
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
+  }
 }
