@@ -45,6 +45,8 @@ aside ul {
 }
 .kepek {
   background-color: white;
+  display: grid;
+  grid-template-rows: auto auto auto 30px;
 }
 .kepek ul {
   display: grid;
@@ -65,6 +67,11 @@ aside ul {
 }
 .kepek ul li a:hover {
   background-color: lightpink;
+}
+.szoveg{
+    margin-bottom: 12px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 img {
   width: 100%;
